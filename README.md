@@ -2,7 +2,7 @@
 
 ![DaftPunktocat Octocat](http://zno.io/RMu9/daftpunktocat.gif)
 
-A [NodeGH](http://nodegh.io) plugin for commenting GIFs on pull requests/issues using [Giphy API](https://github.com/Giphy/GiphyAPI).
+A NodeGH plugin for commenting on pull requests/issues using GIF reactions.
 
 > Maintained by [Zeno Rocha](https://github.com/zenorocha).
 
