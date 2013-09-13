@@ -1,27 +1,25 @@
 {
-    "name": "gh-boilerplate",
-    "description": "NodeGH plugin boilerplate.",
+    "name": "gh-gif",
+    "description": "NodeGH plugin for commenting on pull requests/issues using GIF reactions",
     "version": "0.1.0",
-    "homepage": "http://nodegh.io",
     "author": {
-        "name": "Author",
-        "email": "email@email.com",
-        "web": "http://www.nodegh.io"
+        "name": "Zeno Rocha",
+        "email": "hi@zenorocha.com",
+        "web": "http://zenorocha.com"
     },
-    "license": "BSD",
+    "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "git@github.com:node-gh/gh-boilerplate.git"
+        "url": "git@github.com:node-gh/gh-gif.git"
     },
     "bugs": {
-        "url": "https://github.com/node-gh/gh-boilerplate/issues"
+        "url": "https://github.com/node-gh/gh-gif/issues"
     },
     "keywords": [
-        "gh", "nodegh", "boilerplate", "plugin"
+        "gh", "nodegh", "gif", "plugin"
     ],
     "bin": {
-        "gh-bo": "bin/boilerplate.js",
-        "gh-boilerplate": "bin/boilerplate.js"
+        "gh-gif": "bin/gif.js"
     },
     "engines": {
         "node": ">=0.8"

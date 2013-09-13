@@ -1,8 +1,8 @@
 # GH Gif [![NPM version](https://badge.fury.io/js/gh-gif.png)](http://badge.fury.io/js/gh-gif) [![Dependency Status](https://david-dm.org/node-gh/gh-gif.png)](https://david-dm.org/node-gh/gh-gif)
 
-![DaftPunktocat Octocat](http://zno.io/RMu9/daftpunktocat.gif)
+![DaftPunktocat](http://zno.io/RMu9/daftpunktocat.gif)
 
-A NodeGH plugin for commenting on pull requests/issues using GIF reactions.
+NodeGH plugin for commenting on pull requests/issues using GIF reactions.
 
 > Maintained by [Zeno Rocha](https://github.com/zenorocha).
 
