@@ -21,7 +21,7 @@ gh gif
 Option             | Usage        | Type
 ---                | ---          | ---
 `-n`, `--number`   | **Required** | `Boolean`
-`-R`, `--reaction` | *Optional*   | `String`
+`-R`, `--reaction` | **Required** | `String`
 `-r`, `--repo`     | *Optional*   | `String`
 `-u`, `--user`     | *Optional*   | `String`
 
@@ -54,4 +54,4 @@ gh gif --number 75 --reaction happy
 
 ## License
 
-[MIT License](http://zenorocha.mit-license.org/) © Zeno Rocha
+[MIT License](http://zenorocha.mit-license.org) © Zeno Rocha
