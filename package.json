@@ -24,6 +24,9 @@
     "engines": {
         "node": ">=0.8"
     },
+    "dependencies": {
+        "giphy-wrapper": "0.0.1"
+    }
     "peerDependencies": {
         "gh": ">=1.4.0"
     },
