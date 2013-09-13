@@ -1,48 +1,57 @@
 /*
  * Copyright 2013, All Rights Reserved.
  *
- * Code licensed under the BSD License:
- * https://github.com/node-gh/gh/blob/master/LICENSE.md
+ * Code licensed under the MIT License:
+ * http://zenorocha.mit-license.org
  *
- * @author Author <email@email.com>
+ * @author Zeno Rocha <hi@zenorocha.com>
  */
 
-// -- Requires -----------------------------------------------------------------
-var GH_PATH = process.env.GH_PATH,
+var GH_PATH = process.env.GH_PATH;
+
+// -- Requires -----------------------------------------------------------------,
+var giphy  = require('giphy-wrapper')('YOUR_API_KEY'),
     logger = require(GH_PATH + 'lib/logger');
 
 // -- Constructor --------------------------------------------------------------
-function Boilerplate(options) {
+function Gif(options) {
     this.options = options;
 }
 
 // -- Constants ----------------------------------------------------------------
-Boilerplate.DETAILS = {
-    alias: 'bo',
-    description: 'Plugin example. Copy to start a new plugin.',
+Gif.DETAILS = {
+    description: 'NodeGH plugin for commenting on pull requests/issues using GIF reactions.',
     options: {
-        'foo': Boolean
+        'number': Boolean,
+        'reaction': String
     },
     shorthands: {
-        'f': [ '--foo' ]
+        'n': [ '--number' ],
+        'R': [ '--reaction' ]
     },
     payload: function(payload, options) {
-        options.foo = true;
+        options.number = payload;
     }
 };
 
 // -- Commands -----------------------------------------------------------------
-Boilerplate.prototype.run = function() {
+Gif.prototype.run = function() {
     var instance = this,
         options = instance.options;
 
-    if (options.foo) {
-        instance.foo();
+    if (options.reaction) {
+        instance.reaction();
     }
 };
 
-Boilerplate.prototype.foo = function() {
-    logger.log('NodeGH plugin boilerplate :)');
+Gif.prototype.reaction = function() {
+    giphy.search(options.reaction, 10, 0, function (err, data) {
+        if (err) {
+            logger.error(err);
+        }
+
+        console.log(data);
+    });
 };
 
-exports.Impl = Boilerplate;
+exports.Impl = Gif;
