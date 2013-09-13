@@ -1,4 +1,4 @@
-# GH Gif [![NPM version](https://badge.fury.io/js/gh-gif.png)](http://badge.fury.io/js/gh-gif)
+# GH Gif [![NPM version](https://badge.fury.io/js/gh-gif.png)](http://badge.fury.io/js/gh-gif) [![Dependency Status](https://david-dm.org/node-gh/gh-gif.png)](https://david-dm.org/node-gh/gh-gif)
 
 ![DaftPunktocat Octocat](http://zno.io/RMu9/daftpunktocat.gif)
 
