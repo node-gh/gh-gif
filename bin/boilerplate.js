@@ -22,7 +22,7 @@ function Gif(options) {
 Gif.DETAILS = {
     description: 'NodeGH plugin for commenting on pull requests/issues using GIF reactions.',
     options: {
-        'number': Boolean,
+        'number': Number,
         'reaction': String
     },
     shorthands: {

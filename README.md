@@ -20,23 +20,29 @@ gh gif
 
 Option             | Usage        | Type
 ---                | ---          | ---
-`-n`, `--number`   | **Required** | `Boolean`
+`-n`, `--number`   | **Required** | `Number`
 `-R`, `--reaction` | **Required** | `String`
 `-r`, `--repo`     | *Optional*   | `String`
 `-u`, `--user`     | *Optional*   | `String`
 
 #### Examples
 
-* **Shortcut** for commenting on a pull request/issue with a happy reaction.
+* **Shortcut** for commenting on pull request/issue #75 with a happy reaction.
 
     ```
 gh gif 75 --reaction happy
     ```
 
-* Comment on a pull request/issue with a happy reaction.
+* Comment on pull request/issue #75 with a happy reaction.
 
     ```
 gh gif --number 75 --reaction happy
+    ```
+
+* Comment on pull request/issue #75 of a certain repo with a surprised reaction.
+
+    ```
+gh gif --number 75 --reaction surprised --user node-gh --repo gh-gif
     ```
 
 ## Contributing
