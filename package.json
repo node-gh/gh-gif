@@ -1,0 +1,33 @@
+{
+    "name": "gh-boilerplate",
+    "description": "NodeGH plugin boilerplate.",
+    "version": "0.1.0",
+    "homepage": "http://nodegh.io",
+    "author": {
+        "name": "Author",
+        "email": "email@email.com",
+        "web": "http://www.nodegh.io"
+    },
+    "license": "BSD",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:node-gh/gh-boilerplate.git"
+    },
+    "bugs": {
+        "url": "https://github.com/node-gh/gh-boilerplate/issues"
+    },
+    "keywords": [
+        "gh", "nodegh", "boilerplate", "plugin"
+    ],
+    "bin": {
+        "gh-bo": "bin/boilerplate.js",
+        "gh-boilerplate": "bin/boilerplate.js"
+    },
+    "engines": {
+        "node": ">=0.8"
+    },
+    "peerDependencies": {
+        "gh": ">=1.4.0"
+    },
+    "preferGlobal": "true"
+}
