@@ -25,6 +25,7 @@
         "node": ">=0.8"
     },
     "dependencies": {
+        "async": "0.2.9",
         "giphy-wrapper": "0.0.1"
     },
     "peerDependencies": {
