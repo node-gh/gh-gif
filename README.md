@@ -40,6 +40,12 @@ gh gif 75 --reaction happy
 gh gif 75 --reaction surprised --user node-gh --repo gh-gif
     ```
 
+* Comment on pull request/issue #75 using a certain image.
+
+    ```
+gh gif 75 --image http://media1.giphy.com/media/5DQdk5oZzNgGc/original.gif
+    ```
+
 ## Contributing
 
 1. Fork it!

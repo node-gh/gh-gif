@@ -76,7 +76,7 @@ Gif.prototype.reaction = function(opt_callback) {
         function(callback) {
             giphy.search(options.reaction, responseLimit, 0, function (err, result) {
                 if (!err) {
-                    options.image = result.data[randomNumber].images.original.url;
+                    options.image = options.image || result.data[randomNumber].images.original.url;
                 }
 
                 callback(err);
