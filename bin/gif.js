@@ -68,17 +68,17 @@ Gif.prototype.run = function() {
 Gif.prototype.reaction = function(opt_callback) {
     var instance = this,
         options = instance.options,
-        responseLimit = 50,
-        randomNumber = Math.floor(Math.random() * responseLimit),
+        random,
         operations;
 
     operations = [
         function(callback) {
-            giphy.search(options.reaction, responseLimit, 0, function (err, result) {
+            giphy.search(options.reaction, 50, 0, function(err, result) {
                 if (!err) {
-                    options.image = options.image || result.data[randomNumber].images.original.url;
+                    result = result.data;
+                    random = result[Math.floor(Math.random() * result.length)];
+                    options.image = random.images.original.url;
                 }
-
                 callback(err);
             });
         },
