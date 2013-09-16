@@ -13,7 +13,7 @@
         "web": "http://www.eduardo.io",
         "twitter": "eduardolundgren"
     }],
-    "license": "MIT",
+    "license": "BSD",
     "repository": {
         "type": "git",
         "url": "git@github.com:node-gh/gh-gif.git"
