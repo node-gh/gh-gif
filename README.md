@@ -66,4 +66,4 @@ gh gif 75 --image http://media1.giphy.com/media/5DQdk5oZzNgGc/original.gif
 
 ## License
 
-[MIT License](http://zenorocha.mit-license.org) © Zeno Rocha
+[BSD License](https://github.com/node-gh/gh/blob/master/LICENSE.md)
