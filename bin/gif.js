@@ -107,14 +107,12 @@ Gif.prototype.reaction = function(opt_callback) {
                 }
                 callback(err);
             });
-        },
-        function(callback) {
-            options.comment = "![" + options.reaction + "](" + options.image + ")";
-            instance.issue.comment(callback);
         }
     ];
 
-    async.series(operations, opt_callback);
+    async.series(operations, function() {
+        instance.image(options.image, opt_callback);
+    });
 };
 
 exports.Impl = Gif;
