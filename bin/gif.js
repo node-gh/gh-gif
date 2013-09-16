@@ -1,8 +1,8 @@
 /*
  * Copyright 2013, All Rights Reserved.
  *
- * Code licensed under the MIT License:
- * http://zenorocha.mit-license.org
+ * Code licensed under the BSD License:
+ * https://github.com/node-gh/gh/blob/master/LICENSE.md
  *
  * @author Zeno Rocha <hi@zenorocha.com>
  * @author Eduardo Lundgren <eduardolundgren@gmail.com>
