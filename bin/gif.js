@@ -12,7 +12,7 @@ var GH_PATH = process.env.GH_PATH;
 
 // -- Requires -----------------------------------------------------------------,
 var async  = require('async'),
-    giphy  = require('giphy-wrapper')('Kyy2lc3guGBO0'),
+    giphy  = require('giphy-wrapper')('dc6zaTOxFJmzC'),
     logger = require(GH_PATH + 'lib/logger'),
     issueImpl = require(GH_PATH + 'lib/cmds/issue').Impl;
 
