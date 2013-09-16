@@ -56,6 +56,9 @@ gh gif 75 --image http://media1.giphy.com/media/5DQdk5oZzNgGc/original.gif
 
 ## History
 
+* v0.1.1 September 15, 2013
+    * Fix "gh gif 1 --image url"
+    * Fix --reaction to use --image command implementation
 * v0.1.0 September 15, 2013
     * First public release
 * v0.0.1 September 12, 2013
