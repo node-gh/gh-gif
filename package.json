@@ -7,6 +7,12 @@
         "email": "hi@zenorocha.com",
         "web": "http://zenorocha.com"
     },
+    "contributors": [{
+        "name": "Eduardo Lundgren",
+        "email": "eduardolundgren@gmail.com",
+        "web": "http://www.eduardo.io",
+        "twitter": "eduardolundgren"
+    }],
     "license": "MIT",
     "repository": {
         "type": "git",
