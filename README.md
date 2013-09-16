@@ -56,6 +56,8 @@ gh gif 75 --image http://media1.giphy.com/media/5DQdk5oZzNgGc/original.gif
 
 ## History
 
+* v0.1.2 September 16, 2013
+    * Use public beta key instead of the private one
 * v0.1.1 September 15, 2013
     * Fix `gh gif 1 --image url`
     * Fix `--reaction` to use `--image` command implementation
