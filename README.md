@@ -4,7 +4,7 @@
 
 NodeGH plugin for commenting on pull requests/issues using GIF reactions.
 
-> Maintained by [Zeno Rocha](https://github.com/zenorocha).
+> Maintained by [Zeno Rocha](https://github.com/zenorocha) and [Eduardo Lundgren](https://github.com/eduardolundgren).
 
 ## Install
 
