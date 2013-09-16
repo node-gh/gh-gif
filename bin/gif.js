@@ -53,6 +53,17 @@ Gif.prototype.run = function() {
     var instance = this,
         options = instance.options;
 
+    if (options.image) {
+        logger.logTemplate('{{prefix}} [info] Adding comment on {{greenBright "#" options.number}}', {
+            options: options
+        });
+
+        instance.image(options.image, function(err) {
+            logger.defaultCallback(
+                err, null, logger.compileTemplate('{{link}}', { options: options }));
+        });
+    }
+
     if (options.reaction) {
         logger.logTemplate('{{prefix}} [info] Adding comment on {{greenBright "#" options.number}}', {
             options: options
@@ -63,6 +74,21 @@ Gif.prototype.run = function() {
                 err, null, logger.compileTemplate('{{link}}', { options: options }));
         });
     }
+};
+
+Gif.prototype.image = function(image, opt_callback) {
+    var instance = this,
+        options = instance.options,
+        operations;
+
+    operations = [
+        function(callback) {
+            options.comment = "![](" + image + ")";
+            instance.issue.comment(callback);
+        }
+    ];
+
+    async.series(operations, opt_callback);
 };
 
 Gif.prototype.reaction = function(opt_callback) {
