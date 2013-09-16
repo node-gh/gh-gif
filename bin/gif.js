@@ -5,6 +5,7 @@
  * http://zenorocha.mit-license.org
  *
  * @author Zeno Rocha <hi@zenorocha.com>
+ * @author Eduardo Lundgren <eduardolundgren@gmail.com>
  */
 
 var GH_PATH = process.env.GH_PATH;
