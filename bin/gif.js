@@ -30,6 +30,10 @@ function Gif(options) {
 // -- Constants ----------------------------------------------------------------
 Gif.DETAILS = {
     description: 'NodeGH plugin for commenting on pull requests/issues using GIF reactions.',
+    commands: [
+        'image',
+        'reaction'
+    ],
     options: {
         'image': String,
         'number': Number,
