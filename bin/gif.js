@@ -88,7 +88,7 @@ Gif.prototype.image = function(image, opt_callback) {
 
     operations = [
         function(callback) {
-            options.comment = "![](" + image + ")";
+            options.comment = '![](' + image + ')';
             instance.issue.comment(callback);
         }
     ];
