@@ -5,7 +5,8 @@
     "author": {
         "name": "Zeno Rocha",
         "email": "hi@zenorocha.com",
-        "web": "http://zenorocha.com"
+        "web": "http://zenorocha.com",
+        "twitter": "zenorocha"
     },
     "contributors": [{
         "name": "Eduardo Lundgren",
@@ -27,15 +28,23 @@
     "bin": {
         "gh-gif": "bin/gif.js"
     },
-    "engines": {
-        "node": ">=0.8"
+    "scripts": {
+        "lint": "node_modules/.bin/jshint bin/ test/",
+        "test": "node_modules/.bin/mocha --reporter list"
     },
     "dependencies": {
         "async": "0.2.9",
         "giphy-wrapper": "0.0.1"
     },
+    "devDependencies": {
+        "jshint": "2.1.2",
+        "mocha": "1.12.0"
+    },
     "peerDependencies": {
         "gh": ">=1.4.0"
+    },
+    "engines": {
+        "node": ">=0.8"
     },
     "preferGlobal": "true"
 }

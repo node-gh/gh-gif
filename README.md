@@ -1,4 +1,4 @@
-# GH Gif [![NPM version](https://badge.fury.io/js/gh-gif.png)](http://badge.fury.io/js/gh-gif) [![Dependency Status](https://david-dm.org/node-gh/gh-gif.png)](https://david-dm.org/node-gh/gh-gif)
+# GH Gif [![Build Status](https://secure.travis-ci.org/node-gh/gh-flow.png?branch=master)](https://travis-ci.org/node-gh/gh-flow) [![NPM version](https://badge.fury.io/js/gh-flow.png)](http://badge.fury.io/js/gh-flow) [![Dependency Status](https://david-dm.org/node-gh/gh-flow.png)](https://david-dm.org/node-gh/gh-flow)
 
 ![DaftPunktocat](http://zno.io/RMu9/daftpunktocat.gif)
 
@@ -44,6 +44,22 @@ gh gif 75 --reaction surprised --user node-gh --repo gh-gif
 
     ```
 gh gif 75 --image http://media1.giphy.com/media/5DQdk5oZzNgGc/original.gif
+    ```
+
+## Testing
+
+Check [Travis](https://travis-ci.org/node-gh/gh-gif) for continous integration results.
+
+* Run [JSHint](http://www.jshint.com/), a tool to detect errors and potential problems.
+
+    ```
+npm run-script lint
+    ```
+
+* Run [Mocha](http://visionmedia.github.io/mocha/), a unit test framework.
+
+    ```
+npm run-script test
     ```
 
 ## Contributing
