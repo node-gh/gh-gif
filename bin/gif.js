@@ -99,8 +99,8 @@ Gif.prototype.image = function(image, opt_callback) {
 Gif.prototype.reaction = function(opt_callback) {
     var instance = this,
         options = instance.options,
-        random,
-        operations;
+        operations,
+        random;
 
     operations = [
         function(callback) {
