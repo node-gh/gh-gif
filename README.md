@@ -72,6 +72,8 @@ npm run-script test
 
 ## History
 
+* v0.1.3 September 22, 2013
+    * Do not post gif on giphy error
 * v0.1.2 September 16, 2013
     * Use public beta key instead of the private one
 * v0.1.1 September 15, 2013
