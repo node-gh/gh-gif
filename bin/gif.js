@@ -112,12 +112,13 @@ Gif.prototype.reaction = function(opt_callback) {
                 }
                 callback(err);
             });
+        },
+        function(callback) {
+            instance.image(options.image, callback);
         }
     ];
 
-    async.series(operations, function() {
-        instance.image(options.image, opt_callback);
-    });
+    async.series(operations, opt_callback);
 };
 
 exports.Impl = Gif;
