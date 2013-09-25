@@ -46,6 +46,12 @@ gh gif 75 --reaction surprised --user node-gh --repo gh-gif
 gh gif 75 --image http://media1.giphy.com/media/5DQdk5oZzNgGc/original.gif
     ```
 
+* Comment on multiple pull requests/issues at the same time.
+
+	```
+gh gif --reaction happy --number 1 --number 2
+	```
+
 ## Testing
 
 Check [Travis](https://travis-ci.org/node-gh/gh-gif) for continous integration results.
