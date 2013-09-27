@@ -1,4 +1,4 @@
-# GH Gif [![Build Status](https://secure.travis-ci.org/node-gh/gh-flow.png?branch=master)](https://travis-ci.org/node-gh/gh-flow) [![NPM version](https://badge.fury.io/js/gh-flow.png)](http://badge.fury.io/js/gh-flow) [![Dependency Status](https://david-dm.org/node-gh/gh-flow.png)](https://david-dm.org/node-gh/gh-flow)
+# GH Gif [![Build Status](https://secure.travis-ci.org/node-gh/gh-gif.png?branch=master)](https://travis-ci.org/node-gh/gh-gif) [![NPM version](https://badge.fury.io/js/gh-gif.png)](http://badge.fury.io/js/gh-gif) [![Dependency Status](https://david-dm.org/node-gh/gh-gif.png)](https://david-dm.org/node-gh/gh-gif)
 
 ![DaftPunktocat](http://zno.io/RMu9/daftpunktocat.gif)
 
