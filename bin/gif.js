@@ -5,7 +5,7 @@
  * https://github.com/node-gh/gh/blob/master/LICENSE.md
  *
  * @author Zeno Rocha <hi@zenorocha.com>
- * @author Eduardo Lundgren <eduardolundgren@gmail.com>
+ * @author Eduardo Lundgren <edu@rdo.io>
  */
 
 var GH_PATH = process.env.GH_PATH;
