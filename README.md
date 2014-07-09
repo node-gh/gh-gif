@@ -1,6 +1,6 @@
 # GH Gif [![Build Status](https://secure.travis-ci.org/node-gh/gh-gif.svg?branch=master)](https://travis-ci.org/node-gh/gh-gif) [![NPM version](https://badge.fury.io/js/gh-gif.svg)](http://badge.fury.io/js/gh-gif) [![Dependency Status](https://david-dm.org/node-gh/gh-gif.svg?theme=badge.io)](https://david-dm.org/node-gh/gh-gif)
 
-![DaftPunktocat](http://zno.io/RMu9/daftpunktocat.gif)
+![DaftPunktocat](https://cloud.githubusercontent.com/assets/398893/3528215/09d7c124-078d-11e4-8ed7-683d3a0936f6.gif)
 
 NodeGH plugin for commenting on pull requests/issues using GIF reactions.
 
