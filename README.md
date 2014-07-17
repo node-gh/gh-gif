@@ -1,4 +1,10 @@
-# GH Gif [![Build Status](https://secure.travis-ci.org/node-gh/gh-gif.svg?branch=master)](https://travis-ci.org/node-gh/gh-gif) [![NPM version](https://badge.fury.io/js/gh-gif.svg)](http://badge.fury.io/js/gh-gif) [![Dependency Status](https://david-dm.org/node-gh/gh-gif.svg?theme=badge.io)](https://david-dm.org/node-gh/gh-gif)
+# GH Gif
+
+[![NPM version](http://img.shields.io/npm/v/gh-gif.svg?style=flat)](http://npmjs.org/gh-gif)
+[![NPM downloads](http://img.shields.io/npm/dm/gh-gif.svg?style=flat)](http://npmjs.org/gh-gif)
+[![Build Status](http://img.shields.io/travis/node-gh/gh-gif/master.svg?style=flat)](https://travis-ci.org/node-gh/gh-gif)
+[![Dependencies Status](http://img.shields.io/david/node-gh/gh-gif.svg?style=flat)](https://david-dm.org/node-gh/gh-gif)
+[![DevDependencies Status](http://img.shields.io/david/dev/node-gh/gh-gif.svg?style=flat)](https://david-dm.org/node-gh/gh-gif#info=devDependencies)
 
 ![DaftPunktocat](https://cloud.githubusercontent.com/assets/398893/3528215/09d7c124-078d-11e4-8ed7-683d3a0936f6.gif)
 
