@@ -40,6 +40,7 @@ Gif.DETAILS = {
         'number': [Number, Array],
         'reaction': String,
         'best': Boolean,
+        'bestof': Number,
         'repo': String,
         'user': String
     },
@@ -48,6 +49,7 @@ Gif.DETAILS = {
         'n': [ '--number' ],
         'R': [ '--reaction' ],
         'b': [ '--best' ],
+        'B': [ '--bestof' ],
         'r': [ '--repo' ],
         'u': [ '--user' ]
     },
@@ -99,6 +101,10 @@ Gif.prototype.image = function(image, opt_callback) {
     async.series(operations, opt_callback);
 };
 
+Gif.prototype.getRandomItem = function (array) {
+    return array[Math.floor(Math.random() * array.length)];
+};
+
 Gif.prototype.reaction = function(opt_callback) {
     var instance = this,
         options = instance.options,
@@ -113,8 +119,12 @@ Gif.prototype.reaction = function(opt_callback) {
 
                     if (options.best) {
                         options.image = result[0].images.original.url;
+                    } else if (options.bestof > 0) {
+                        result = result.slice(0, options.bestof);
+                        random = instance.getRandomItem(result);
+                        options.image = random.images.original.url;
                     } else {
-                        random = result[Math.floor(Math.random() * result.length)];
+                        random = instance.getRandomItem(result);
                         options.image = random.images.original.url;
                     }
                 }

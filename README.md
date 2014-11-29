@@ -29,6 +29,7 @@ Option             | Usage        | Type
 `-n`, `--number`   | **Required** | `Number`
 `-R`, `--reaction` | **Required** | `String`
 `-b`, `--best`     | *Optional*   | `Boolean`
+`-B`, `--bestof`   | *Optional*   | `Number`
 `-i`, `--image`    | *Optional*   | `String`
 `-r`, `--repo`     | *Optional*   | `String`
 `-u`, `--user`     | *Optional*   | `String`
@@ -63,6 +64,12 @@ gh gif --reaction happy --number 1 --number 2
 
     ```
 gh gif 75 --reaction happy --best
+    ```
+
+* Comment on pull request/issue #75 with a random GIF of the first three result items.
+
+    ```
+gh gif 75 --reaction happy --bestof 3
     ```
 
 ## Testing
