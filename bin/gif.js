@@ -105,7 +105,7 @@ Gif.prototype.reaction = function(opt_callback) {
 
     operations = [
         function(callback) {
-            giphy.search(options.reaction, 50, 0, function(err, result) {
+            giphy.search(encodeURIComponent(options.reaction), 50, 0, function(err, result) {
                 if (!err) {
                     result = result.data;
                     random = result[Math.floor(Math.random() * result.length)];
