@@ -39,6 +39,7 @@ Gif.DETAILS = {
         'image': String,
         'number': [Number, Array],
         'reaction': String,
+        'best': Boolean,
         'repo': String,
         'user': String
     },
@@ -46,6 +47,7 @@ Gif.DETAILS = {
         'i': [ '--image' ],
         'n': [ '--number' ],
         'R': [ '--reaction' ],
+        'b': [ '--best' ],
         'r': [ '--repo' ],
         'u': [ '--user' ]
     },
@@ -108,8 +110,13 @@ Gif.prototype.reaction = function(opt_callback) {
             giphy.search(encodeURIComponent(options.reaction), 50, 0, function(err, result) {
                 if (!err) {
                     result = result.data;
-                    random = result[Math.floor(Math.random() * result.length)];
-                    options.image = random.images.original.url;
+
+                    if (options.best) {
+                        options.image = result[0].images.original.url;
+                    } else {
+                        random = result[Math.floor(Math.random() * result.length)];
+                        options.image = random.images.original.url;
+                    }
                 }
                 callback(err);
             });

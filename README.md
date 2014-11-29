@@ -28,6 +28,7 @@ Option             | Usage        | Type
 ---                | ---          | ---
 `-n`, `--number`   | **Required** | `Number`
 `-R`, `--reaction` | **Required** | `String`
+`-b`, `--best`     | *Optional*   | `Boolean`
 `-i`, `--image`    | *Optional*   | `String`
 `-r`, `--repo`     | *Optional*   | `String`
 `-u`, `--user`     | *Optional*   | `String`
@@ -57,6 +58,12 @@ gh gif 75 --image http://media1.giphy.com/media/5DQdk5oZzNgGc/original.gif
 	```
 gh gif --reaction happy --number 1 --number 2
 	```
+
+* Comment on pull request/issue #75 with the best search result
+
+    ```
+gh gif 75 --reaction happy --best
+    ```
 
 ## Testing
 
