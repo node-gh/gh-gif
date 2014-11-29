@@ -28,6 +28,7 @@ Option             | Usage        | Type
 ---                | ---          | ---
 `-n`, `--number`   | **Required** | `Number`
 `-R`, `--reaction` | **Required** | `String`
+`-c`, `--comment`  | *Optional*   | `String`
 `-i`, `--image`    | *Optional*   | `String`
 `-r`, `--repo`     | *Optional*   | `String`
 `-u`, `--user`     | *Optional*   | `String`
@@ -38,6 +39,12 @@ Option             | Usage        | Type
 
     ```
 gh gif 75 --reaction happy
+    ```
+
+You can also use --comment
+
+    ```
+gh gif 75 --comment "This is cool" --reaction congratulation
     ```
 
 * Comment on pull request/issue #75 of a certain repo with a surprised reaction.

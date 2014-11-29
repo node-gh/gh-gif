@@ -39,6 +39,7 @@ Gif.DETAILS = {
         'image': String,
         'number': [Number, Array],
         'reaction': String,
+        'comment': String,
         'repo': String,
         'user': String
     },
@@ -46,6 +47,7 @@ Gif.DETAILS = {
         'i': [ '--image' ],
         'n': [ '--number' ],
         'R': [ '--reaction' ],
+        'c': [ '--comment' ],
         'r': [ '--repo' ],
         'u': [ '--user' ]
     },
@@ -89,7 +91,8 @@ Gif.prototype.image = function(image, opt_callback) {
 
     operations = [
         function(callback) {
-            options.comment = '![](' + image + ')';
+            options.comment = (options.comment)? options.comment + '<br>' : '';
+            options.comment += '![](' + image + ')';
             instance.issue.comment(callback);
         }
     ];
