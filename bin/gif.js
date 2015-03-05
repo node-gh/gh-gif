@@ -14,7 +14,7 @@ var GH_PATH = process.env.GH_PATH;
 var async  = require('async'),
     giphy  = require('giphy-wrapper')('dc6zaTOxFJmzC'),
     logger = require(GH_PATH + 'lib/logger'),
-    issueImpl = require(GH_PATH + 'lib/cmds/issue').Impl;
+    IssueImpl = require(GH_PATH + 'lib/cmds/issue').Impl;
 
 // -- Constructor --------------------------------------------------------------
 function Gif(options) {
@@ -24,7 +24,7 @@ function Gif(options) {
         logger.error('You must specify a pull request or issue number to run this command');
     }
 
-    this.issue = new issueImpl(options);
+    this.issue = new IssueImpl(options);
 }
 
 // -- Constants ----------------------------------------------------------------
