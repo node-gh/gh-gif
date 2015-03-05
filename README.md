@@ -15,7 +15,7 @@ NodeGH plugin for commenting on pull requests/issues using GIF reactions.
 ## Install
 
 ```
-[sudo] npm install -g gh-gif
+[sudo] npm install -g gh gh-gif
 ```
 
 ## Usage
