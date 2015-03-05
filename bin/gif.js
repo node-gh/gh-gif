@@ -65,8 +65,12 @@ Gif.prototype.run = function() {
         });
 
         instance.image(options.image, function(err) {
-            logger.defaultCallback(
-                err, null, logger.compileTemplate('{{link}}', { options: options }));
+            if (err) {
+                logger.error(err);
+                return;
+            }
+
+            logger.compileTemplate('{{link}}', {options: options});
         });
     }
 
@@ -76,8 +80,12 @@ Gif.prototype.run = function() {
         });
 
         instance.reaction(function(err) {
-            logger.defaultCallback(
-                err, null, logger.compileTemplate('{{link}}', { options: options }));
+            if (err) {
+                logger.error(err);
+                return;
+            }
+
+            logger.compileTemplate('{{link}}', {options: options});
         });
     }
 };
