@@ -11,8 +11,7 @@
 var GH_PATH = process.env.GH_PATH;
 
 // -- Requires -----------------------------------------------------------------,
-var async  = require('async'),
-    giphy  = require('giphy-wrapper')('dc6zaTOxFJmzC'),
+var giphy  = require('giphy-wrapper')('dc6zaTOxFJmzC'),
     logger = require(GH_PATH + 'lib/logger'),
     IssueImpl = require(GH_PATH + 'lib/cmds/issue').Impl;
 
@@ -91,43 +90,29 @@ Gif.prototype.run = function() {
 };
 
 Gif.prototype.image = function(image, opt_callback) {
-    var instance = this,
-        options = instance.options,
-        operations;
+    var options = this.options;
 
-    operations = [
-        function(callback) {
-            options.comment = '![](' + image + ')';
-            instance.issue.comment(callback);
-        }
-    ];
-
-    async.series(operations, opt_callback);
+    options.comment = '![](' + image + ')';
+    this.issue.comment(opt_callback);
 };
 
 Gif.prototype.reaction = function(opt_callback) {
     var instance = this,
         options = instance.options,
-        operations,
         random;
 
-    operations = [
-        function(callback) {
-            giphy.search(options.reaction, 50, 0, function(err, result) {
-                if (!err) {
-                    result = result.data;
-                    random = result[Math.floor(Math.random() * result.length)];
-                    options.image = random.images.original.url;
-                }
-                callback(err);
-            });
-        },
-        function(callback) {
-            instance.image(options.image, callback);
+    giphy.search(options.reaction, 50, 0, function(err, result) {
+        if (err) {
+            logger.error(err);
+            return;
         }
-    ];
 
-    async.series(operations, opt_callback);
+        result = result.data;
+        random = result[Math.floor(Math.random() * result.length)];
+        options.image = random.images.original.url;
+
+        instance.image(options.image, opt_callback);
+    });
 };
 
 exports.Impl = Gif;
