@@ -58,45 +58,37 @@ Gif.prototype.run = function() {
     var instance = this,
         options = instance.options;
 
-    if (options.image) {
-        logger.logTemplate('{{prefix}} [info] Adding comment on {{greenBright "#" options.number}}', {
+    if (options.image || options.reaction) {
+        logger.logTemplate('{{prefix}}Adding comment on {{greenBright "#" options.number}}', {
             options: options
         });
+    }
 
-        instance.image(options.image, function(err) {
-            if (err) {
-                logger.error(err);
-                return;
-            }
-
-            logger.compileTemplate('{{link}}', {options: options});
-        });
+    if (options.image) {
+        instance.image(options.image);
     }
 
     if (options.reaction) {
-        logger.logTemplate('{{prefix}} [info] Adding comment on {{greenBright "#" options.number}}', {
-            options: options
-        });
-
-        instance.reaction(function(err) {
-            if (err) {
-                logger.error(err);
-                return;
-            }
-
-            logger.compileTemplate('{{link}}', {options: options});
-        });
+        instance.reaction(options.reaction);
     }
 };
 
-Gif.prototype.image = function(image, opt_callback) {
+Gif.prototype.image = function(image) {
     var options = this.options;
 
     options.comment = '![](' + image + ')';
-    this.issue.comment(opt_callback);
+
+    this.issue.comment(function(err) {
+        if (err) {
+            logger.error('Image not found.');
+            return;
+        }
+
+        logger.compileTemplate('{{link}}', {options: options});
+    });
 };
 
-Gif.prototype.reaction = function(opt_callback) {
+Gif.prototype.reaction = function() {
     var instance = this,
         options = instance.options,
         random;
@@ -108,10 +100,15 @@ Gif.prototype.reaction = function(opt_callback) {
         }
 
         result = result.data;
+
+        if (typeof result !== 'object' || result.length < 1) {
+            logger.error('No image found for your reaction.');
+            return;
+        }
+
         random = result[Math.floor(Math.random() * result.length)];
         options.image = random.images.original.url;
-
-        instance.image(options.image, opt_callback);
+        instance.image(options.image);
     });
 };
 
