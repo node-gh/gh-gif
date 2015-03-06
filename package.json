@@ -1,7 +1,7 @@
 {
     "name": "gh-gif",
     "description": "NodeGH plugin for commenting on pull requests/issues using GIF reactions",
-    "version": "0.3.0",
+    "version": "0.3.1",
     "author": {
         "name": "Zeno Rocha",
         "email": "hi@zenorocha.com",
