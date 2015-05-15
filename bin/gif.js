@@ -70,7 +70,7 @@ Gif.prototype.run = function() {
     }
 
     if (options.image) {
-        logger.logTemplate('{{prefix}} [info] Adding comment on {{greenBright "#" options.number}}', {
+        logger.logTemplate('Adding comment on #{{options.number}}', {
             options: options
         });
 
@@ -81,7 +81,7 @@ Gif.prototype.run = function() {
     }
 
     if (options.reaction) {
-        logger.logTemplate('{{prefix}} [info] Adding comment on {{greenBright "#" options.number}}', {
+        logger.logTemplate('Adding comment on #{{options.number}}', {
             options: options
         });
 
