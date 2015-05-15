@@ -38,6 +38,7 @@ Gif.DETAILS = {
         'image': String,
         'number': [Number, Array],
         'reaction': String,
+        'comment': String,
         'repo': String,
         'user': String
     },
@@ -45,6 +46,7 @@ Gif.DETAILS = {
         'i': [ '--image' ],
         'n': [ '--number' ],
         'R': [ '--reaction' ],
+        'c': [ '--comment' ],
         'r': [ '--repo' ],
         'u': [ '--user' ]
     },
@@ -58,10 +60,8 @@ Gif.prototype.run = function() {
     var instance = this,
         options = instance.options;
 
-    if (options.image || options.reaction) {
-        logger.logTemplate('{{prefix}}Adding comment on {{greenBright "#" options.number}}', {
-            options: options
-        });
+    if (!options.comment && !options.reaction) {
+        logger.error('Missing options command.');
     }
 
     if (options.image) {
@@ -71,12 +71,17 @@ Gif.prototype.run = function() {
     if (options.reaction) {
         instance.reaction(options.reaction);
     }
+
+    logger.logTemplate('Adding comment on #{{options.number}}', {
+        options: options
+    });
 };
 
 Gif.prototype.image = function(image) {
     var options = this.options;
 
-    options.comment = '![](' + image + ')';
+    options.comment = (options.comment) ? options.comment + '<br>' : '';
+    options.comment += '![](' + image + ')';
 
     this.issue.comment(function(err) {
         if (err) {
