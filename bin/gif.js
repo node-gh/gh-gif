@@ -61,12 +61,8 @@ Gif.prototype.run = function() {
     var instance = this,
         options = instance.options;
 
-    if (options.comment && !options.reaction) {
-        logger.logTemplate('{{prefix}} [error] you forgot the --reaction options (shortcut -R)', {
-            options: options
-        });
-
-        return false;
+    if (!options.comment && !options.reaction) {
+        logger.error('Missing options command.');
     }
 
     if (options.image) {
