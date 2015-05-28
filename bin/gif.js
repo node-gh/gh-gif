@@ -76,9 +76,7 @@ Gif.prototype.run = function() {
         instance.reaction(options.reaction);
     }
 
-    logger.logTemplate('Adding comment on #{{options.number}}', {
-        options: options
-    });
+    logger.log('Adding comment on #' + options.number);
 };
 
 Gif.prototype.image = function(image) {
