@@ -45,9 +45,9 @@ gh gif 75 --reaction happy
 
 You can also use --comment
 
-    ```
+```
 gh gif 75 --comment "This is cool" --reaction congratulation
-    ```
+```
 
 * Comment on pull request/issue #75 of a certain repo with a surprised reaction.
 
