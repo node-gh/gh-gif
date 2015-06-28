@@ -43,7 +43,7 @@ Option             | Usage        | Type
 gh gif 75 --reaction happy
     ```
 
-You can also use --comment
+* You can also use --comment
 
     ```
 gh gif 75 --comment "This is cool" --reaction congratulation
