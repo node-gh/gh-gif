@@ -6,8 +6,6 @@
 [![Dependencies Status](http://img.shields.io/david/node-gh/gh-gif.svg?style=flat)](https://david-dm.org/node-gh/gh-gif)
 [![DevDependencies Status](http://img.shields.io/david/dev/node-gh/gh-gif.svg?style=flat)](https://david-dm.org/node-gh/gh-gif#info=devDependencies)
 
-![DaftPunktocat](https://cloud.githubusercontent.com/assets/398893/3528215/09d7c124-078d-11e4-8ed7-683d3a0936f6.gif)
-
 NodeGH plugin for commenting on pull requests/issues using GIF reactions.
 
 > Maintained by [Zeno Rocha](https://github.com/zenorocha) and [Eduardo Lundgren](https://github.com/eduardolundgren).
